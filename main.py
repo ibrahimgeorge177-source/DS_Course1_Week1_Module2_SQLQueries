@@ -235,7 +235,7 @@ FROM babe_ruth_stats;""", conn3)
 # Replace None with your code
 df_teams_years = pd.read_sql("""
 SELECT team,
-COUNT(*) AS number_of_years
+COUNT(year) AS number_years
 FROM babe_ruth_stats
 GROUP BY team;""", conn3)
 
